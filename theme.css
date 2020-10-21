@@ -103,7 +103,7 @@ a:hover {
   color: #3D3D3D;
   border: 0;
   height: 1.5em;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   opacity: 0;
   transition: all ease .3s;
 }
@@ -147,7 +147,7 @@ a:hover {
   color: white;
   flex-grow: 1;
   flex-basis: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   padding: 10px 0;
@@ -244,7 +244,7 @@ a:hover {
 .header .header-menu .btn-menu > a:hover, .header .header-menu .header-info > a:hover {
   color: inherit;
   text-decoration: none;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Floating menu */
@@ -282,7 +282,7 @@ a:hover {
   color: #323232;
   font-size: 14px;
   opacity: 1px;
-  font: 14px/26px 'Source Sans Pro', sans-serif !important;
+  font: 14px/26px 'Inter', sans-serif !important;
 }
 
 .list-menu-float .icon-menu:hover .text {
@@ -341,7 +341,7 @@ a:hover {
   background: #323232 !important;
   border: none !important;
   border-radius: 0 13px 13px 0;
-  font: 14px/26px 'Source Sans Pro', sans-serif !important;
+  font: 14px/26px 'Inter', sans-serif !important;
   text-indent: 7.5px;
   text-align: center;
   white-space: nowrap;
@@ -389,7 +389,7 @@ a:hover {
   background: #fff;
   border-radius: 13px;  
   color: #323232;
-  font: normal 0/26px 'Source Sans Pro', sans-serif;
+  font: normal 0/26px 'Inter', sans-serif;
   text-indent: 0;
   text-align: left;
   text-shadow: none;
@@ -449,7 +449,7 @@ a:hover {
 }
 
 .cover-block .image-container .btn-list-setting .text {
-  font: 14px/15px 'Source Sans Pro', sans-serif;
+  font: 14px/15px 'Inter', sans-serif;
   text-shadow: none;
   width: auto;
   display: inline-block;
@@ -472,7 +472,7 @@ a:hover {
   padding: 0;
   opacity: 1;
   color: #323232;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   border: none;
   display: block;
 }
@@ -506,7 +506,7 @@ a:hover {
   background: #fff;
   border-radius: 13px;  
   color: #323232;
-  font: normal 0/26px 'Source Sans Pro', sans-serif;
+  font: normal 0/26px 'Inter', sans-serif;
   text-indent: 0;
   text-align: left;
   text-shadow: none;
@@ -597,7 +597,7 @@ a:hover {
   border-radius: 13px 0 0 13px;
   margin-left: -13px;
   color: white;
-  font: 14px/26px 'Source Sans Pro', sans-serif;
+  font: 14px/26px 'Inter', sans-serif;
   text-align: center;
   text-indent: -7.5px;
   opacity: 0;
@@ -700,7 +700,7 @@ a:hover {
 
 .list-unit .list-status-title .stats a {
   margin: 0 0 0 6px;
-  font: 14px/26px 'Source Sans Pro', sans-serif;
+  font: 14px/26px 'Inter', sans-serif;
 }
 
 .list-unit .list-status-title .stats a i {
@@ -715,7 +715,7 @@ a:hover {
   border-radius: 16px;
   margin: 10px auto;
   color: #323232;
-  font: 16px/32px 'Source Sans Pro', sans-serif;
+  font: 16px/32px 'Inter', sans-serif;
   text-align: center;
 }
 
@@ -728,7 +728,7 @@ a:hover {
   border-radius: 16px;
   margin: 32px auto;
   color: #323232;
-  font: 16px/32px 'Source Sans Pro', sans-serif;
+  font: 16px/32px 'Inter', sans-serif;
   text-align: center;
 }
 
@@ -1774,7 +1774,7 @@ div#fancybox-wrap {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #ababab;
-  font: 11px/15px 'Source Sans Pro', sans-serif;
+  font: 11px/15px 'Inter', sans-serif;
   text-align: left;
   white-space: pre-wrap;
   z-index: 10 !important;
@@ -2017,6 +2017,10 @@ div#fancybox-wrap {
 
 .list-table .list-table-data .data.tags span a[href*="\=DarkSide"]::after {
   content: "Eu coleciono o mangá e ele foi lançado aqui pela DarkSide, no selo Tokyo Terror.";
+}
+
+.list-table .list-table-data .data.tags span a[href*="\=Pipoca%20%26%20Nanquim"]::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pelo Pipoca & Nanquim, no selo Drago."; 
 }
 
 .list-table .list-table-data .data.tags span a[href*="\=Desprez%C3%ADvel"]::after {
