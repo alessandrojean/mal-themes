@@ -2035,6 +2035,18 @@ div#fancybox-wrap {
   content: "Eu coleciono o mangá e ele foi lançado aqui pela Conrad."; 
 }
 
+.list-table .list-table-data .data.tags span a[href*="\=L%26PM"]::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela L&PM."; 
+}
+
+.list-table .list-table-data .data.tags span a[href*="\=Verus"]::after {
+  content: "Eu coleciono a novel e ela foi lançada aqui pela Verus."; 
+}
+
+.list-table .list-table-data .data.tags span a[href*="\=Agir"]::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Agir."; 
+}
+
 .list-table .list-table-data .data.tags span a[href*="\=Desprez%C3%ADvel"]::after {
   content: "A obra possui um conteúdo repugnante e desprezível.\a\a Exemplos: Estupros, Incestos etc.";
 }
