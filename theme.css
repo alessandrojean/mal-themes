@@ -2023,6 +2023,14 @@ div#fancybox-wrap {
   content: "Eu coleciono o mangá e ele foi lançado aqui pelo Pipoca & Nanquim, no selo Drago."; 
 }
 
+.list-table .list-table-data .data.tags span a[href*="\=Veneta"]::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Veneta."; 
+}
+
+.list-table .list-table-data .data.tags span a[href*="\=Todavia"]::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Todavia."; 
+}
+
 .list-table .list-table-data .data.tags span a[href*="\=Desprez%C3%ADvel"]::after {
   content: "A obra possui um conteúdo repugnante e desprezível.\a\a Exemplos: Estupros, Incestos etc.";
 }
