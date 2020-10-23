@@ -1,0 +1,76 @@
+%button {
+  background-color: $button-background;
+  border: 1px $button-border solid;
+  color: $button-color;
+  padding: calc(.5em - 1px) 1em;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: $radius;
+  font-size: 1rem;
+  height: $button-height;
+  transition: none;
+
+  i.fa {
+    margin-left: calc(-0.5em - 1px);
+    margin-right: 0.25em;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &:hover {
+    border-color: $button-hover-border;
+    color: $button-color;
+  }
+
+  &:focus {
+    box-shadow: $button-focus-shadow;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+%select {
+  display: block;
+  height: $select-height;
+  font-size: 1rem;
+  outline: 0;
+  background-color: $select-background;
+  border-color: $select-border;
+  border-radius: $radius;
+  color: $text-color;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) calc(.75em - 1px);
+  
+  &:hover {
+    border-color: $select-hover-border;
+  }
+  
+  &:focus {
+    border-color: $select-focus-border;
+    box-shadow: $select-focus-shadow;
+  }
+}
+
+%textarea {
+  resize: none;
+  box-sizing: border-box;
+  padding: calc(.75em - 1px);
+  box-shadow: $textarea-shadow;
+  background-color: $textarea-background;
+  border-color: $textarea-border;
+  outline: none;
+  border-radius: $radius;
+  color: $textarea-color;
+  font-family: $font-family;
+    
+  &:hover {
+    border-color: $textarea-hover-border;
+  }
+    
+  &:focus {
+    border-color: $textarea-focus-border;
+    box-shadow: $textarea-focus-shadow;
+  }
+}

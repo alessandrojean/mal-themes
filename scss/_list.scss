@@ -1,0 +1,627 @@
+.list-unit .list-status-title {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+    
+  .text {
+    color: $list-title-color;
+    font-family: $font-family;
+    font-weight: 600;
+    line-height: 1.125;
+    text-align: left;
+    font-size: 0;
+    width: unset;
+    height: unset;
+  }
+    
+  .stats {
+    position: unset;
+      
+    a {
+      @extend %button;
+    }
+  }
+}
+
+body.manga .list-unit.all_anime .text::after {
+  content: 'All manga';
+  font-size: 2rem;
+}
+
+body.anime .list-unit.all_anime .text::after {
+  content: 'All anime';
+  font-size: 2rem;
+}
+
+.list-unit.completed .list-status-title .text::after {
+  content: 'Completed';
+  font-size: 2rem;
+}
+
+.list-unit.reading .list-status-title .text::after {
+  content: 'Currently reading';
+  font-size: 2rem;
+}
+
+.list-unit.watching .list-status-title .text::after {
+  content: 'Currently watching';
+  font-size: 2rem;
+}
+
+.list-unit.onhold .list-status-title .text::after {
+  content: 'On hold';
+  font-size: 2rem;
+}
+
+.list-unit.dropped .list-status-title .text::after {
+  content: 'Dropped';
+  font-size: 2rem;
+}
+
+.list-unit.plantoread .list-status-title .text::after {
+  content: 'Plan to read';
+  font-size: 2rem;
+}
+
+.list-unit.plantowatch .list-status-title .text::after {
+  content: 'Plan to watch';
+  font-size: 2rem;
+}
+
+.list-unit .list-stats {
+  background: white;
+  border-radius: $radius;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: $font-family;
+  color: $text-color;
+  box-sizing: border-box;
+  width: 100%;
+  height: unset;
+  line-height: 1.5;
+  box-shadow: $large-shadow;
+}
+
+.list-unit .list-table {
+  border: none;
+}
+
+.list-unit .list-table[data-items='[]']::before {
+  content: '\f119';
+  display: block;
+  width: 100%;
+  height: 13rem;
+  margin-top: 2rem;
+  font-size: 10rem;
+  font-family: FontAwesome;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+  text-align: center;
+}
+
+.list-unit .list-table[data-items='[]']::after {
+  content: 'No entries found';
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: hsl(0, 0%, 48%);
+}
+
+.list-table .list-table-header {
+  display: none;
+}
+
+.list-table .list-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 4rem;
+  border: none;
+  margin-bottom: 1em;
+  background: $list-item-background;
+  box-shadow: $large-shadow;
+  border-radius: 4px;
+}
+
+.list-table .list-table-data {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
+  font-size: 0;
+}
+
+.list-table .list-table-data .data {
+  display: block;
+  height: 100%;
+  padding: 0;
+  border: none;
+  flex: 0 0 auto;
+  color: $text-color;
+  font-size: 1rem;
+
+  &.number {
+    position: relative;
+    background: $list-data-number-background;
+    border-radius: 50%;
+    width: $list-data-number-width;
+    height: $list-data-number-height;
+    top: -$list-data-number-height;
+    margin: 0 -1.5rem 0 0.5rem;
+    order: $list-data-number-order;
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 0.7rem;
+    z-index: 5;
+  }
+
+  &.status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $list-data-status-width;
+    height: $list-data-status-height;
+    padding: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  &.image {
+    width: $list-data-image-width;
+    height: $list-data-image-height;
+    margin: 0.25rem 0 0.25rem 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    order: $list-data-image-order;
+      
+    a {
+      position: relative;
+      display: block;
+    }
+      
+    a img.image {
+      width: 3rem;
+      height: auto;
+      border: none;
+      margin-top: 1.5rem;
+      transform: translateY(-50%);
+    }
+      
+    a::after {
+      content: '\f14c';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-family: FontAwesome;
+      color: white;
+      font-size: 1.125rem;
+      line-height: 3rem;
+      opacity: 0;
+      transition: all ease .3s;
+    }
+      
+    a:hover {
+      opacity: 1;
+        
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+    
+  &.type {
+    position: relative;
+    top: -1.125rem;
+    width: $list-data-type-width;
+    height: $list-data-type-height;
+    padding-left: 1rem;
+    margin-right: -$list-data-type-width - 1rem;
+    order: $list-data-type-order;
+    text-align: left;
+    color: $list-data-type-color;
+    line-height: 1.5;
+    font-size: 0.8rem;
+  }
+    
+  &.title {
+    position: relative;
+    height: 1rem;
+    padding: 2rem 0 0 0.5rem;
+    order: $list-data-title-order;
+    flex: 1 0 auto;
+    line-height: 1.5;
+      
+    .link.sort {
+      position: absolute;
+      top: 0.6rem;
+      left: 1rem;
+      display: inline-block;
+      max-width: 100%;
+      padding-right: 1rem;
+      overflow: hidden;
+      box-sizing: border-box;
+      line-height: 1.5;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+        
+      &:hover {
+        color: $mal-color;
+        text-decoration: none;
+      }
+    }
+      
+    a.icon-watch,
+    .content-status {
+      display: none;
+    }
+    
+    .rewatching,
+    .rereading {
+      font-size: 0.7rem;
+      margin-left: 0.5rem;
+      display: inline-block;
+        
+      &::before {
+        content: '[';
+      }
+        
+      &::after {
+        content: ']';
+      }
+    }
+        
+    .add-edit-more {
+      display: inline-block;
+      float: none;
+      color: $list-data-title-add-edit-color;
+      font-size: 0.7rem;
+      // padding-top: 0.25rem;
+      padding-left: 0.5rem;
+    
+      span a {
+        color: $list-data-title-add-edit-color;
+          
+        &:hover {
+          color: $list-data-title-add-edit-hover-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+    
+  &.score {
+    position: relative;
+    width: $list-data-score-width;
+    height: $list-data-score-height;
+    order: $list-data-score-order;
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+      
+    a.link {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0 auto;
+      background: #ebebeb;
+      border-radius: 50%;
+      line-height: 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      
+      &:not(.edit-disabled):hover {
+        background: #323232;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+      
+    select {
+      @extend %select;
+      width: 100%;
+      font-size: 0.75rem;
+      transform: translateY(-0.25rem);
+    }
+  }
+    
+  &.progress,
+  &.chapter,
+  &.volume {
+    width: $list-data-prog-chap-vol-width;
+    order: $list-data-prog-chap-vol-order;
+    font-size: 0.875rem;
+      
+    span {
+      color: $text-color;
+      font-weight: 500;
+    }
+      
+    span::before {
+      color: #bababa;
+      font-size: 0.75em;
+      font-weight: 400;
+    }
+  }
+    
+  &.progress span:first-of-type::before {
+    content: 'Prog. ';
+  }
+    
+  &.chapter {
+    margin-top: -1.5rem;
+      
+    span:first-of-type::before {
+      content: 'Ch. ';
+    }
+  }
+    
+  &.volume {
+    margin: 2rem 0 0 -6.5rem;
+      
+    span:first-of-type::before {
+      content: 'Vol. ';
+    }
+  }
+    
+  &.magazine {
+    order: $list-data-magazine-order;
+    width: $list-data-magazine-width;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-shrink: 1;
+    font-size: 0.875rem;
+    
+      a {
+          width: $list-data-magazine-width !important;
+          height: $list-data-magazine-height;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: inline-block;
+      }
+      
+    span a::hover {
+      text-decoration: none !important;
+    }
+      
+    &::before {
+      content: 'Magazine';
+      display: block;
+      color: #bababa;
+      font-size: 0.75em;
+    }
+  }
+    
+  &.season {
+    order: $list-data-season-order;
+    width: $list-data-season-width;
+    font-size: 0.875rem;
+    
+    &::before {
+      content: 'Premiered';
+      display: block;
+      color: #bababa;
+      font-size: 0.9em;
+    }
+  }
+    
+  &.tags,
+  &.studio,
+  &.licensor {
+    order: $list-data-tag-studio-licensor-order;
+    width: $list-data-tag-studio-licensor-width;
+    padding: 3px 0 !important;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    flex-shrink: 1;
+      
+    span {
+      display: block;
+      padding: 1px 0;
+      font-size: 0;
+      line-height: 0;
+        
+      a:not(.edit) {
+        display: block;
+        padding: 2px;
+        background: #ebebeb;
+        border-radius: 0.5rem;
+        color: $text-color;
+        font-size: 0.75rem;
+        line-height: 1.2;
+        z-index: 10;
+      }
+        
+      a:hover {
+        background: $text-color;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+      
+    a.edit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: #d9d9d9;
+      text-align: left;
+      font-size: 0;
+      opacity: 0;
+      z-index: 5;
+        
+      &::after {
+        content: '\f040';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 100%;
+        height: 20px;
+        margin-top: -10px;
+        color: rgba(50, 50, 50, 0);
+        font-size: 1rem;
+        font-family: FontAwesome;
+        text-align: center;
+      }
+        
+      &:hover::after {
+        color: $text-color;
+        font-size: 1rem;
+      }
+    }
+      
+    textarea {
+      @extend %textarea;
+      position: absolute;
+      top: calc(50% + 0.25rem);
+      right: 0.5rem;
+      width: 29.75rem !important;
+      height: calc(100% - 0.5rem);
+      margin-top: -2rem;
+      resize: none;
+      z-index: 5;
+    }
+  }
+    
+  &.started,
+  &.finished,
+  &.days,
+  &.airing-started,
+  &.airing-finished {
+    order: $list-data-stats-order;
+    position: relative;
+    width: $list-data-stats-width;
+    height: $list-data-stats-height;
+    overflow: hidden;
+    color: $text-color;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-align: left;
+    text-overflow: ellipsis;
+    font-feature-settings: 'tnum' 1;
+      
+    &::before {
+      display: inline-block;
+      width: 2rem;
+      height: 1.1rem;
+      padding-right: 0.25rem;
+      border-right: 1px solid #9a9a9a;
+      text-align: right;
+      color: #bababa;
+      font-size: 0.75em;
+      font-feature-settings: 'tnum' 0;
+    }
+  }
+    
+  &.started {
+    top: -1rem;
+      
+    &::before {
+      content: 'Start';
+    }
+  }
+    
+  &.finished {
+    top: 0;
+    margin-left: -8rem;
+    
+    &::before {
+      content: 'End';
+    }
+  }
+    
+  &.days {
+    top: 1rem;
+    margin-left: -8rem;
+    
+    &::before {
+      content: 'Days';
+    }
+  }
+    
+  &.airing-started {
+    top: -0.5rem;
+  }
+    
+  &.airing-finished {
+    top: 0.5rem;
+    margin-left: -8rem;
+      
+    &::before {
+      content: 'To';
+    }
+  }
+}
+
+.list-table .list-item:nth-child(n + 101) .list-table-data .data.number {
+  text-indent: -5px;
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+
+.list-table .list-item:hover .list-table-data .data.tags a.edit {
+  opacity: 0.7;
+    
+  &:hover {
+    width: 25px;
+    opacity: 1;
+    text-decoration: none;
+  }
+}
+
+.list-table .list-table-data .anime .data.airing-started::before {
+  content: 'Aired';
+}
+
+.list-table .list-table-data .manga .data.airing-started::before {
+  content: 'Issued';
+}
+
+@supports (object-fit: cover) {
+  .list-table .list-table-data .data.image a img.image {
+    height: 3rem;
+    margin: 0;
+    object-fit: cover;
+    transform: none;
+  }
+}
+
+// More info
+
+.list-table .more-info {
+  border: none;
+    
+  .more-content {
+    padding: 1.5rem;
+  }
+    
+  .td1 {
+    position: relative;
+    color: $text-color;
+      
+    & > div {
+      margin: 0;
+    }
+      
+    & > div > a {
+      display: none;
+    }
+  }
+}
+
+// Spinner
+
+.list-unit .loading-space {
+  margin: 1.5rem;
+}

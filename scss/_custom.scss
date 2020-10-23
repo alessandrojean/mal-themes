@@ -1,0 +1,118 @@
+.list-table .list-table-data .data-tags span a:hover {
+  opacity: 1;
+}
+
+.list-table .list-table-data .data.tags span a[href*="\=Favorito"] {
+  position: absolute;
+  left: -3rem;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background: $favorite-tag-background;
+  border-radius: 50%;
+  box-shadow: $large-shadow;
+  margin-top: -1rem;
+  overflow: hidden;
+  color: $favorite-tag-color;
+  font-size: 0;
+  line-height: 2rem;
+  font-family: FontAwesome;
+    
+  &::before {
+    content: '\f004';
+    font-size: 1rem;
+  }
+    
+  &:hover {
+    background: $favorite-tag-hover-background;
+    color: $favorite-tag-hover-color;
+    text-decoration: none;
+  }
+}
+
+.list-table .list-table-data .data.tags span a {
+  position: relative;
+    
+  &:not([href*='\=Favorito'])::after,
+  &:not([href*='\=Favorito'])::before {
+    position: absolute;
+    display: block;
+    transition: all ease .15s;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1;
+  }
+    
+  &:not([href*='\=Favorito'])::after {
+    top: 0.5rem;
+    left: -17rem;
+    width: 15rem;
+    height: auto;
+    padding: 0.25rem 0.5rem;
+    background: #191919;
+    border: 1px solid #777;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #ababab;
+    font-size: 0.875rem;
+    font-family: $font-family;
+    text-align: left;
+    white-space: pre-wrap;
+    z-index: 10 !important;
+    will-change: transform;
+    transform: translate(0, -51%);
+    background-size: 15rem auto;
+    background-repeat: no-repeat;
+    content: 'Sem descrição.';
+  }
+    
+  &:not([href*='\=Favorito'])::before {
+    content: '';
+    top: 0.25rem;
+    left: -2rem;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent transparent transparent #777;
+  }
+    
+  &:not([href*="\=Favorito"]):hover::after {
+    left: -16rem;
+    opacity: 1;
+  }
+
+  &:not([href*="\=Favorito"]):hover::before {
+    left: -1rem;
+    opacity: 1;
+  }
+    
+  @each $popup-type, $popup-map in $popups {
+    $color: map-get($popup-map, 'color');
+    $text: map-get($popup-map, 'text');
+    $list: map-get($popup-map, 'list');
+
+    @each $popup-name, $popup in $list {
+      $url: map-get($popup, 'url');
+
+      &[href*='#{$url}'] {
+        background-color: $color;
+        color: $text;
+
+        &::after {
+          $description: map-get($popup, 'description');
+          $image: map-get($popup, 'image');
+          $padding-top: map-get($popup, 'padding-top');
+          
+          @if $description {
+            content: $description;
+          }
+
+          @if $image {
+            background-image: url($image);
+            padding-top: $padding-top;
+          }
+        }
+      }
+    }
+  }
+}

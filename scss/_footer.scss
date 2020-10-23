@@ -1,0 +1,15 @@
+#footer-block {
+  background: $footer-background;
+  font-family: $font-family;
+  padding: 3rem 1.5rem 6rem;
+
+  #copyright {
+    color: $footer-color;
+    font-size: 1em;
+  }
+
+  #copyright::before {
+    content: 'Design by Alessandro Jean. Inspired at Bulma.';
+    display: block;
+  }
+}

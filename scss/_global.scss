@@ -1,0 +1,24 @@
+html {
+  font-size: 16px;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: 1.5;
+  background: $background-color none no-repeat center / cover fixed;
+}
+
+a {
+  color: $link-color;
+  transition: all ease .3s;
+}
+
+a:hover {
+  transition: all ease .3s;
+  text-decoration: none !important;
+  color: $mal-color;
+}

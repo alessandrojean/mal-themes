@@ -1,0 +1,13 @@
+{
+  "name": "mal-themes",
+  "version": "1.0.0",
+  "repository": "https://github.com/alessandrojean/mal-themes.git",
+  "author": "Alessandro Jean",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-sass --output-style expanded scss/main.scss docs/css/main.css"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

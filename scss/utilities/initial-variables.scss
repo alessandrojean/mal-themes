@@ -1,0 +1,395 @@
+$background-color: #efefef;
+
+$link-color: #3D3D3D;
+$mal-color: #4065BA;
+$primary-color: $mal-color;
+$text-color: #363636;
+
+$font-family: 'Inter', sans-serif;
+$font-size: 1em;
+
+$radius: 4px;
+
+$large-shadow: 0 10px 20px rgba(#000, 0.05);
+
+$button-background: #fff;
+$button-border: #dbdbdb;
+$button-color: $text-color;
+$button-height: 2.5em;
+$button-hover-border: #b5b5b5;
+$button-focus-shadow: 0 0 0 0.125em rgba(50, 115, 220, .25);
+
+$select-background: #fff;
+$select-border: #dbdbdb;
+$select-color: $text-color;
+$select-height: 2.5em;
+$select-hover-border: #b5b5b5;
+$select-focus-border: #3273dc;
+$select-focus-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
+
+$textarea-shadow: inset 0 0.0625em 0.125em rgba(10,10,10,.05);
+$textarea-background: #fff;
+$textarea-border: #dbdbdb;
+$textarea-color: $text-color;
+$textarea-hover-border: #b5b5b5;
+$textarea-focus-border: #3273dc;
+$textarea-focus-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
+
+$header-background: $mal-color;
+$header-menu-text:  rgba(255, 255, 255, 0.7);
+$header-button-hover-background: #F2F2F3;
+
+$status-menu-background: transparent;
+$status-menu-button-color: #fff;
+$status-menu-button-hover-background: rgba(10, 10, 10, 0.1);
+$status-menu-button-active-background: #fff;
+$status-menu-button-active-color: $primary-color;
+
+$list-title-color: $text-color;
+$list-item-background: #fff;
+
+$list-data-number-background: #fff;
+$list-data-number-order: 1;
+$list-data-number-width: 1rem;
+$list-data-number-height: 1rem;
+
+$list-data-status-width: 2px;
+$list-data-status-height: 100%;
+
+$list-data-image-order: 1;
+$list-data-image-width: 3rem;
+$list-data-image-height: 3rem;
+
+$list-data-type-order: 11;
+$list-data-type-width: 10rem;
+$list-data-type-height: 1rem;
+$list-data-type-color: #bababa;
+
+$list-data-title-order: 12;
+$list-data-title-add-edit-color: #bababa;
+$list-data-title-add-edit-hover-color: $text-color;
+
+$list-data-score-order: 13;
+$list-data-score-width: 6rem;
+$list-data-score-height: 1.5rem;
+
+$list-data-prog-chap-vol-order: 15;
+$list-data-prog-chap-vol-width: 6.5rem;
+
+$list-data-magazine-order: 19;
+$list-data-magazine-width: 8rem;
+$list-data-magazine-height: 1.5rem;
+
+$list-data-season-order: 20;
+$list-data-season-width: 8rem;
+
+$list-data-tag-studio-licensor-order: 21;
+$list-data-tag-studio-licensor-width: 8rem;
+
+$list-data-stats-order: 25;
+$list-data-stats-width: 8rem;
+$list-data-stats-height: 1.3rem;
+
+$favorite-tag-background: #fff;
+$favorite-tag-color: #ff65ad;
+$favorite-tag-hover-background: $text-color;
+$favorite-tag-hover-color: #fff;
+
+$footer-background: $mal-color;
+$footer-color: rgba(255, 255, 255, 0.7);
+
+$publishers: (
+  'jbc': (
+    url: '\=Editora%20JBC',
+    description: 'Eu coleciono o mangá (ou novel) e ele foi lançado aqui pela Editora JBC.'
+  ),
+  'panini': (
+    url: '\=Panini',
+    description: 'Eu coleciono o mangá (ou novel) e ele foi lançado aqui pela Panini.'
+  ),
+  'newpop': (
+    url: '\=NewPOP%20Editora',
+    description: 'Eu coleciono o mangá (ou novel) e ele foi lançado aqui pela NewPOP.'
+  ),
+  'sampa': (
+    url: '\=JENS%20Nova%20Sampa',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela Nova Sampa.'
+  ),
+  'devir': (
+    url: '\=Editora%20Devir',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela Devir.'
+  ),
+  'darkside': (
+    url: '\=DarkSide',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela DarkSide.'
+  ),
+  'pn': (
+    url: '\=Pipoca%20%26%20Nanquim',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pelo Pipoca & Nanquim.'
+  ),
+  'veneta': (
+    url: '\=Veneta',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela Veneta.'
+  ),
+  'todavia': (
+    url: '\=Todavia',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela Todavia.'
+  ),
+  'conrad': (
+    url: '\=Conrad',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela Conrad.'
+  ),
+  'lpm': (
+    url: '\=L%26PM',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela L&PM.'
+  ),
+  'verus': (
+    url: '\=Verus',
+    description: 'Eu coleciono a novel e ela foi lançada aqui pela Verus.'
+  ),
+  'agir': (
+    url: '\=Agir',
+    description: 'Eu coleciono o mangá e ele foi lançado aqui pela Verus.'
+  )
+);
+
+$demographies: (
+  'shounen': (
+    url: '\=Shounen',
+    description: 'A demografia da obra é shounen, ou seja, voltado mais para meninos numa faixa etária de 10~18 anos.\a\a Lembrando que demografia é diferente de gênero.'
+  ),
+  'shoujo': (
+    url: '\=Shoujo',
+    description: 'A demografia da obra é shoujo, ou seja, voltado mais para meninas numa faixa etária de 10~18 anos.\a\a Lembrando que demografia é diferente de gênero.'
+  ),
+  'seinen': (
+    url: '\=Seinen',
+    description: 'A demografia da obra é seinen, ou seja, voltado mais para homens adultos.\a\a Lembrando que demografia é diferente de gênero.'
+  ),
+  'josei': (
+    url: '\=Josei',
+    description: 'A demografia da obra é josei, ou seja, voltado mais para mulheres adultas.\a\a Lembrando que demografia é diferente de gênero.'
+  )
+);
+
+$genres: (
+  'comedia': (
+    url: '\=Com%C3%A9dia',
+    description: 'Obras que tenham foco muito grande em piadas, paródias etc.\a\a Exemplo: Gintama.',
+    image: 'https://i.imgur.com/wA3EbnM.gif',
+    padding-top: 159px
+  ),
+  'acao': (
+    url: '\=A%C3%A7%C3%A3o',
+    description: 'Obras que eu considero que tenham pelo menos algumas lutas, sejam com armas ou corpo-a-corpo.'
+  ),
+  'aventura': (url: '\=Aventura'),
+  'thriller': (
+    url: '\=Thriller',
+    description: 'Geralmente obras com algum mistério ou suspense como base, onde há investigações.'
+  ),
+  'slice-of-life': (
+    url: '\=Slice%20of%20Life',
+    description: 'Obras que focam apenas em mostrar o dia-a-dia dos personagens, sem nada muito especial.'
+  ),
+  'fantasia': (
+    url: '\=Fantasia',
+    description: 'Obras que se passem em algum mundo diferente do contemporâneo, mais puxado para um passado medieval.'
+  ),
+  'romance': (
+    url: '\=Romance',
+    description: 'Obras que foquem, ou pelo menos dêem a entender, no romance entre pelo menos um casal.'
+  ),
+  'drama': (
+    url: '\=Drama',
+    description: 'Obras que tem um certo apelo emocional envolvido.'
+  ),
+  'terror': (
+    url: '\=Terror',
+    description: 'Obras que apelam para o medo.'
+  ),
+  'psicologico': (
+    url: '\=Psicol%C3%B3gico',
+    description: 'Obras que mexem com o psicológico de quem lê, uma espécie de jogo mental.'
+  ),
+  'sci-fi': (
+    url: '\=Sci-Fi',
+    description: 'Obras que se passam em futuros, sejam distópicos ou não, com tecnologias avançadas.'
+  ),
+  'mecha': (
+    url: '\=Mecha',
+    description: 'Obras com robôs gigantes pilotados por seres humanos.'
+  ),
+  'misterio': (
+    url: '\=Mist%C3%A9rio',
+    description: 'Obras que tenham algum mistério que é resolvido lentamente ao decorrer dela.'
+  ),
+  'suspense': (
+    url: '\=Suspense',
+    description: 'Obras que tenham algum elemento que te puxa a atenção e te deixa pensativo sobre o que pode acontecer.'
+  ),
+  'esportes': (
+    url: '\=Esportes',
+    description: 'Obras que seguem sempre o padrão: time escolar, campeonato etc.'
+  ),
+  'ecchi': (
+    url: '\=Ecchi',
+    description: 'Quando a obra possui muito enfoque em mostrar sem necessidade, apenas por fanservice, peitos ou bundas.',
+    image:'https://i.giphy.com/media/3jbdh4RO1PHIfHHQqG/giphy.gif',
+    padding-top: 185px
+  )
+);
+
+$custom-1: (
+  'desprezivel': (
+    url: '\=Desprez%C3%ADvel',
+    description: 'A obra possui um conteúdo repugnante e desprezível.\a\a Exemplos: Estupros, Incestos etc.'
+  ),
+  'nscdo': (
+    url: '\=NSCDO',
+    description: 'Quando eu não lembro direito do enredo, mas assisti a muito tempo e lembro de parcialmente ter gostado.',
+    image: 'https://i.imgur.com/7ajZE0z.jpg',
+    padding-top: 118px
+  ),
+  'fui-tapeado': (
+    url: '\=Fui%20Tapeado',
+    description: 'Quando todo mundo fala bem desta obra, mas no fim ela é horrível e eu só perdi meu tempo.',
+    padding-top: 155px
+  ),
+  'combo-classico': (
+    url: '\=Combo%20Cl%C3%A1ssico',
+    description: 'Combo clássico: o enredo é um completo lixo e a obra também, mas as músicas de abertura e encerramento são ótimas.'
+  )
+);
+
+$custom-2: (
+  'family-friendly': (
+    url: '\=Family%20Friendly',
+    description: 'A obra pode ser vista em conjunto com a família, não possui conteúdo prejudicial.'
+  ),
+  'guilty-pleasure': (
+    url: '\=Guilty%20Pleasure',
+    description: 'Por algum motivo eu gostei da obra, mesmo ela não sendo muito bacana.\a\a Pode-se dizer que é embaraçoso eu gostar disso.'
+  ),
+  'modinha': (
+    url: '\=Modinha',
+    description: 'A obra é extremamente popular, hypada demais e não é tão boa quanto todo mundo fala.\a\a Costumo ter raiva e ódio dessas obras ao ponto de nem iniciar quando vira modinha.'
+  ),
+  'hypado-demais': (
+    url: '\=Hypado%20demais',
+    description: 'A obra é muito hypada pela fandom, mas não é grandes coisas igual todos falam.'
+  ),
+  'second-lead': (
+    url: '\=Second%20Lead',
+    description: 'A obra em si é boa, mas existe alguma personagem que é second lead de algum casal, atrapalhando o desenvolvimento dos dois.'
+  ),
+  'gostos-divergentes': (
+    url: '\=Gostos%20Divergentes',
+    description: 'Basicamente, esta obra não é para mim.'
+  ),
+  'cansativo': (
+    url: '\=Cansativo',
+    description: 'Assistir (ou ler) esta obra é algo extremamente massante e cansativo.'
+  ),
+  'chato': (
+    url: '\=Chato',
+    description: 'O enredo da obra é muito chato e entediante, não dá para ficar empolgado assistindo.'
+  ),
+  'confuso': (
+    url: '\=Confuso',
+    description: 'O enredo é extremamente confuso, requer muita atenção para captar os detalhes importantes para o entendimento.',
+    image: 'https://i.imgur.com/f9xYBg7.gif',
+    padding-top: 143px
+  ),
+  'animacao-ruim': (
+    url: '\=Anima%C3%A7%C3%A3o%20Ruim',
+    description: 'A animação é simplesmente horrível e mal trabalhada.\a\a Geralmente eu acho a animação ruim quando ela é inteira feita em CG, ou quando ela é da Toei Animation.'
+  ),
+  'final-filler': (
+    url: '\=Final%20Filler',
+    description: 'O final do anime é filler, fazendo com que eu tenha perdido tempo assistindo enquanto deveria estar lendo o mangá.'
+  )
+);
+
+$custom-3: (
+  'boa-ost': (
+    url: '\=Boa%20OST',
+    description: 'A OST do anime é surpreendente e viciante.'
+  ),
+  'boa-animacao': (
+    url: '\=Boa%20Anima%C3%A7%C3%A3o',
+    description: 'A animação feita pelo estúdio está em um nível espetacular e bem trabalhado.'
+  ),
+  'emocionante': (
+    url: '\=Emocionante',
+    description: 'A obra me emocionou muito durante o decorrer.'
+  ),
+  'dificil-de-assistir': (
+    url: '\=Dif%C3%ADcil%20de%20Assistir',
+    description: 'Alguma coisa fez o desenvolvimento ficar muito chato ou cansativo para mim.'
+  ),
+  'dificil-de-ler': (
+    url: '\=Dif%C3%ADcil%20de%20Ler',
+    description: 'Alguma coisa fez o desenvolvimento ficar muito chato ou cansativo para mim.'
+  ),
+  'harem': (
+    url: '\=Har%C3%A9m',
+    description: 'Possui muitas pessoas apaixonadas pelo mesmo indivíduo.\a\a Geralmente não gosto pois a presença de Second Lead tem grandes probabilidades.'
+  ),
+  'me-surpreendeu': (
+    url: '\=Me%20Surpreendeu',
+    description: 'Aquelas obras que eu comecei sem esperar muito, mas surpreendentemente foram muito melhores do que eu esperava.'
+  ),
+  'viagem-no-tempo': (
+    url: '\=Viagem%20no%20Tempo',
+    description: 'A obra possui elementos de viagem no tempo. Só por possuir isso já ganha um certo destaque.',
+    image: 'https://i.giphy.com/media/mPxA66wgs8s4o/giphy-downsized.gif',
+    padding-top: 118px
+  ),
+  'empolgante': (
+    url: '\=Empolgante',
+    description: 'O decorrer da obra faz você ficar na expectativa do que vai acontecer. Impossível não maratonar!',
+    image: 'https://i.imgur.com/9E8Lqdj.gif',
+    padding-top: 139px
+  )
+);
+
+$publisher-color: #00c3d7;
+$demography-color: $publisher-color;
+$genre-color: #f01d54;
+$custom-1-color: #9edb48;
+$custom-2-color: #a857bd;
+$custom-3-color: #f9bb3d;
+
+$popups: (
+  'publishers': (
+    color: $publisher-color,
+    text: findColorInvert($publisher-color),
+    list: $publishers
+  ),
+  'demographies': (
+    color: $demography-color,
+    text: findColorInvert($demography-color),
+    list: $demographies
+  ),
+  'genres': (
+    color: $genre-color,
+    text: findColorInvert($genre-color),
+    list: $genres
+  ),
+  'custom-1': (
+    color: $custom-1-color,
+    text: findColorInvert($custom-1-color),
+    list: $custom-1
+  ),
+  'custom-2': (
+    color: $custom-2-color,
+    text: findColorInvert($custom-2-color),
+    list: $custom-2
+  ),
+  'custom-3': (
+    color: $custom-3-color,
+    text: findColorInvert($custom-3-color),
+    list: $custom-3
+  )
+);

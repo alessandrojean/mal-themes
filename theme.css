@@ -1362,7 +1362,7 @@ a:hover {
 }
 
 .list-unit .loading-space #loading-spinner {
-  width: 20px
+  width: 20px;
   height: 20px;
   margin: 0 auto;
   color: #323232;

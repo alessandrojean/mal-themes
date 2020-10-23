@@ -1,0 +1,1486 @@
+@charset "UTF-8";
+@import url("https://rsms.me/inter/inter.css");
+.list-unit .list-status-title .stats a {
+  background-color: #fff;
+  border: 1px #dbdbdb solid;
+  color: #363636;
+  padding: calc(.5em - 1px) 1em;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  font-size: 1rem;
+  height: 2.5em;
+  transition: none;
+}
+
+.list-unit .list-status-title .stats a i.fa {
+  margin-left: calc(-0.5em - 1px);
+  margin-right: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.list-unit .list-status-title .stats a:hover {
+  border-color: #b5b5b5;
+  color: #363636;
+}
+
+.list-unit .list-status-title .stats a:focus {
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.list-unit .list-status-title .stats a:last-of-type {
+  margin-right: 0;
+}
+
+.list-table .list-table-data .data.score select {
+  display: block;
+  height: 2.5em;
+  font-size: 1rem;
+  outline: 0;
+  background-color: #fff;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  color: #363636;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) calc(.75em - 1px);
+}
+
+.list-table .list-table-data .data.score select:hover {
+  border-color: #b5b5b5;
+}
+
+.list-table .list-table-data .data.score select:focus {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.list-table .list-table-data .data.tags textarea, .list-table .list-table-data .data.studio textarea, .list-table .list-table-data .data.licensor textarea {
+  resize: none;
+  box-sizing: border-box;
+  padding: calc(.75em - 1px);
+  box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+  background-color: #fff;
+  border-color: #dbdbdb;
+  outline: none;
+  border-radius: 4px;
+  color: #363636;
+  font-family: "Inter", sans-serif;
+}
+
+.list-table .list-table-data .data.tags textarea:hover, .list-table .list-table-data .data.studio textarea:hover, .list-table .list-table-data .data.licensor textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.list-table .list-table-data .data.tags textarea:focus, .list-table .list-table-data .data.studio textarea:focus, .list-table .list-table-data .data.licensor textarea:focus {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+html {
+  font-size: 16px;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #efefef none no-repeat center/cover fixed;
+}
+
+a {
+  color: #3D3D3D;
+  transition: all ease .3s;
+}
+
+a:hover {
+  transition: all ease .3s;
+  text-decoration: none !important;
+  color: #4065BA;
+}
+
+.header {
+  background-color: #4065BA;
+  width: 100%;
+  padding-left: calc(50% - 512px);
+  padding-right: calc(50% - 512px);
+  display: flex;
+  box-sizing: border-box;
+}
+
+.header .header-title {
+  position: inherit;
+  width: 196px;
+  background-size: 154px 26px;
+  order: 1;
+}
+
+.header .header-menu {
+  position: inherit;
+  order: 2;
+  flex-grow: 1;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.list-container {
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.cover-block {
+  background-color: #4065BA;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.cover-block .image-container {
+  width: 100%;
+  display: block;
+}
+
+.cover-block .image-container .btn-list-setting {
+  background-color: #fff;
+  border: none !important;
+  border-radius: 290486px;
+  color: #4065BA;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  top: 1.5em !important;
+  right: calc(50% - 512px) !important;
+  padding: calc(.5em - 1px) calc(1em + .25em) !important;
+  font-family: "Inter", sans-serif !important;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  transition: none;
+}
+
+.cover-block .image-container .btn-list-setting i.fa {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  color: #4065BA;
+}
+
+.cover-block .image-container .btn-list-setting i.icon-plus-circle {
+  background-color: #fff;
+  left: calc(1em + 18px);
+}
+
+.cover-block .image-container .btn-list-setting .text {
+  margin-left: .25em !important;
+  display: inline-block;
+  color: #4065BA;
+}
+
+.cover-block .image-container .btn-list-setting:hover {
+  background-color: #F2F2F3;
+  border-radius: 290486px;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: #4065BA;
+}
+
+.status-menu-container {
+  background: transparent;
+  width: 100%;
+  height: unset;
+  padding: 0 calc(50% - 512px);
+  box-sizing: border-box;
+  margin-top: -2.6em;
+  border-bottom: none;
+}
+
+.status-menu-container.fixed {
+  position: initial;
+}
+
+.status-menu-container .status-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.status-menu-container .status-menu .search-container {
+  display: none;
+}
+
+.status-menu-container .status-menu .status-button {
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #fff;
+  display: block;
+  opacity: 0.9;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  padding: .5em 1em;
+  transition: none;
+}
+
+.status-menu-container .status-menu .status-button:hover {
+  background-color: rgba(10, 10, 10, 0.1);
+  opacity: 1;
+}
+
+.status-menu-container .status-menu .status-button::after {
+  display: none !important;
+}
+
+.status-menu-container .status-menu .status-button.on {
+  background-color: #fff;
+  border-color: #fff;
+  color: #4065BA;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.status-menu-container.fixed + div.list-block {
+  margin-top: 16px;
+}
+
+.list-unit .list-status-title {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.list-unit .list-status-title .text {
+  color: #363636;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1.125;
+  text-align: left;
+  font-size: 0;
+  width: unset;
+  height: unset;
+}
+
+.list-unit .list-status-title .stats {
+  position: unset;
+}
+
+body.manga .list-unit.all_anime .text::after {
+  content: 'All manga';
+  font-size: 2rem;
+}
+
+body.anime .list-unit.all_anime .text::after {
+  content: 'All anime';
+  font-size: 2rem;
+}
+
+.list-unit.completed .list-status-title .text::after {
+  content: 'Completed';
+  font-size: 2rem;
+}
+
+.list-unit.reading .list-status-title .text::after {
+  content: 'Currently reading';
+  font-size: 2rem;
+}
+
+.list-unit.watching .list-status-title .text::after {
+  content: 'Currently watching';
+  font-size: 2rem;
+}
+
+.list-unit.onhold .list-status-title .text::after {
+  content: 'On hold';
+  font-size: 2rem;
+}
+
+.list-unit.dropped .list-status-title .text::after {
+  content: 'Dropped';
+  font-size: 2rem;
+}
+
+.list-unit.plantoread .list-status-title .text::after {
+  content: 'Plan to read';
+  font-size: 2rem;
+}
+
+.list-unit.plantowatch .list-status-title .text::after {
+  content: 'Plan to watch';
+  font-size: 2rem;
+}
+
+.list-unit .list-stats {
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #363636;
+  box-sizing: border-box;
+  width: 100%;
+  height: unset;
+  line-height: 1.5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.list-unit .list-table {
+  border: none;
+}
+
+.list-unit .list-table[data-items='[]']::before {
+  content: '\f119';
+  display: block;
+  width: 100%;
+  height: 13rem;
+  margin-top: 2rem;
+  font-size: 10rem;
+  font-family: FontAwesome;
+  font-weight: 500;
+  color: #7a7a7a;
+  text-align: center;
+}
+
+.list-unit .list-table[data-items='[]']::after {
+  content: 'No entries found';
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #7a7a7a;
+}
+
+.list-table .list-table-header {
+  display: none;
+}
+
+.list-table .list-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 4rem;
+  border: none;
+  margin-bottom: 1em;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.list-table .list-table-data {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
+  font-size: 0;
+}
+
+.list-table .list-table-data .data {
+  display: block;
+  height: 100%;
+  padding: 0;
+  border: none;
+  flex: 0 0 auto;
+  color: #363636;
+  font-size: 1rem;
+}
+
+.list-table .list-table-data .data.number {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  top: -1rem;
+  margin: 0 -1.5rem 0 0.5rem;
+  order: 1;
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 0.7rem;
+  z-index: 5;
+}
+
+.list-table .list-table-data .data.status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  padding: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.list-table .list-table-data .data.image {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.25rem 0 0.25rem 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  order: 1;
+}
+
+.list-table .list-table-data .data.image a {
+  position: relative;
+  display: block;
+}
+
+.list-table .list-table-data .data.image a img.image {
+  width: 3rem;
+  height: auto;
+  border: none;
+  margin-top: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.list-table .list-table-data .data.image a::after {
+  content: '\f14c';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: FontAwesome;
+  color: white;
+  font-size: 1.125rem;
+  line-height: 3rem;
+  opacity: 0;
+  transition: all ease .3s;
+}
+
+.list-table .list-table-data .data.image a:hover {
+  opacity: 1;
+}
+
+.list-table .list-table-data .data.image a:hover::after {
+  opacity: 1;
+}
+
+.list-table .list-table-data .data.type {
+  position: relative;
+  top: -1.125rem;
+  width: 10rem;
+  height: 1rem;
+  padding-left: 1rem;
+  margin-right: -11rem;
+  order: 11;
+  text-align: left;
+  color: #bababa;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+.list-table .list-table-data .data.title {
+  position: relative;
+  height: 1rem;
+  padding: 2rem 0 0 0.5rem;
+  order: 12;
+  flex: 1 0 auto;
+  line-height: 1.5;
+}
+
+.list-table .list-table-data .data.title .link.sort {
+  position: absolute;
+  top: 0.6rem;
+  left: 1rem;
+  display: inline-block;
+  max-width: 100%;
+  padding-right: 1rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-table .list-table-data .data.title .link.sort:hover {
+  color: #4065BA;
+  text-decoration: none;
+}
+
+.list-table .list-table-data .data.title a.icon-watch,
+.list-table .list-table-data .data.title .content-status {
+  display: none;
+}
+
+.list-table .list-table-data .data.title .rewatching,
+.list-table .list-table-data .data.title .rereading {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+.list-table .list-table-data .data.title .rewatching::before,
+.list-table .list-table-data .data.title .rereading::before {
+  content: '[';
+}
+
+.list-table .list-table-data .data.title .rewatching::after,
+.list-table .list-table-data .data.title .rereading::after {
+  content: ']';
+}
+
+.list-table .list-table-data .data.title .add-edit-more {
+  display: inline-block;
+  float: none;
+  color: #bababa;
+  font-size: 0.7rem;
+  padding-left: 0.5rem;
+}
+
+.list-table .list-table-data .data.title .add-edit-more span a {
+  color: #bababa;
+}
+
+.list-table .list-table-data .data.title .add-edit-more span a:hover {
+  color: #363636;
+  text-decoration: none;
+}
+
+.list-table .list-table-data .data.score {
+  position: relative;
+  width: 6rem;
+  height: 1.5rem;
+  order: 13;
+  text-align: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.list-table .list-table-data .data.score a.link {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 auto;
+  background: #ebebeb;
+  border-radius: 50%;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.list-table .list-table-data .data.score a.link:not(.edit-disabled):hover {
+  background: #323232;
+  color: #fff;
+  text-decoration: none;
+}
+
+.list-table .list-table-data .data.score select {
+  width: 100%;
+  font-size: 0.75rem;
+  transform: translateY(-0.25rem);
+}
+
+.list-table .list-table-data .data.progress, .list-table .list-table-data .data.chapter, .list-table .list-table-data .data.volume {
+  width: 6.5rem;
+  order: 15;
+  font-size: 0.875rem;
+}
+
+.list-table .list-table-data .data.progress span, .list-table .list-table-data .data.chapter span, .list-table .list-table-data .data.volume span {
+  color: #363636;
+  font-weight: 500;
+}
+
+.list-table .list-table-data .data.progress span::before, .list-table .list-table-data .data.chapter span::before, .list-table .list-table-data .data.volume span::before {
+  color: #bababa;
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.list-table .list-table-data .data.progress span:first-of-type::before {
+  content: 'Prog. ';
+}
+
+.list-table .list-table-data .data.chapter {
+  margin-top: -1.5rem;
+}
+
+.list-table .list-table-data .data.chapter span:first-of-type::before {
+  content: 'Ch. ';
+}
+
+.list-table .list-table-data .data.volume {
+  margin: 2rem 0 0 -6.5rem;
+}
+
+.list-table .list-table-data .data.volume span:first-of-type::before {
+  content: 'Vol. ';
+}
+
+.list-table .list-table-data .data.magazine {
+  order: 19;
+  width: 8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  flex-shrink: 1;
+  font-size: 0.875rem;
+}
+
+.list-table .list-table-data .data.magazine a {
+  width: 8rem !important;
+  height: 1.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.list-table .list-table-data .data.magazine span a::hover {
+  text-decoration: none !important;
+}
+
+.list-table .list-table-data .data.magazine::before {
+  content: 'Magazine';
+  display: block;
+  color: #bababa;
+  font-size: 0.75em;
+}
+
+.list-table .list-table-data .data.season {
+  order: 20;
+  width: 8rem;
+  font-size: 0.875rem;
+}
+
+.list-table .list-table-data .data.season::before {
+  content: 'Premiered';
+  display: block;
+  color: #bababa;
+  font-size: 0.9em;
+}
+
+.list-table .list-table-data .data.tags, .list-table .list-table-data .data.studio, .list-table .list-table-data .data.licensor {
+  order: 21;
+  width: 8rem;
+  padding: 3px 0 !important;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  flex-shrink: 1;
+}
+
+.list-table .list-table-data .data.tags span, .list-table .list-table-data .data.studio span, .list-table .list-table-data .data.licensor span {
+  display: block;
+  padding: 1px 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.list-table .list-table-data .data.tags span a:not(.edit), .list-table .list-table-data .data.studio span a:not(.edit), .list-table .list-table-data .data.licensor span a:not(.edit) {
+  display: block;
+  padding: 2px;
+  background: #ebebeb;
+  border-radius: 0.5rem;
+  color: #363636;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  z-index: 10;
+}
+
+.list-table .list-table-data .data.tags span a:hover, .list-table .list-table-data .data.studio span a:hover, .list-table .list-table-data .data.licensor span a:hover {
+  background: #363636;
+  color: #fff;
+  text-decoration: none;
+}
+
+.list-table .list-table-data .data.tags a.edit, .list-table .list-table-data .data.studio a.edit, .list-table .list-table-data .data.licensor a.edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: #d9d9d9;
+  text-align: left;
+  font-size: 0;
+  opacity: 0;
+  z-index: 5;
+}
+
+.list-table .list-table-data .data.tags a.edit::after, .list-table .list-table-data .data.studio a.edit::after, .list-table .list-table-data .data.licensor a.edit::after {
+  content: '\f040';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  margin-top: -10px;
+  color: rgba(50, 50, 50, 0);
+  font-size: 1rem;
+  font-family: FontAwesome;
+  text-align: center;
+}
+
+.list-table .list-table-data .data.tags a.edit:hover::after, .list-table .list-table-data .data.studio a.edit:hover::after, .list-table .list-table-data .data.licensor a.edit:hover::after {
+  color: #363636;
+  font-size: 1rem;
+}
+
+.list-table .list-table-data .data.tags textarea, .list-table .list-table-data .data.studio textarea, .list-table .list-table-data .data.licensor textarea {
+  position: absolute;
+  top: calc(50% + 0.25rem);
+  right: 0.5rem;
+  width: 29.75rem !important;
+  height: calc(100% - 0.5rem);
+  margin-top: -2rem;
+  resize: none;
+  z-index: 5;
+}
+
+.list-table .list-table-data .data.started, .list-table .list-table-data .data.finished, .list-table .list-table-data .data.days, .list-table .list-table-data .data.airing-started, .list-table .list-table-data .data.airing-finished {
+  order: 25;
+  position: relative;
+  width: 8rem;
+  height: 1.3rem;
+  overflow: hidden;
+  color: #363636;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  font-feature-settings: 'tnum' 1;
+}
+
+.list-table .list-table-data .data.started::before, .list-table .list-table-data .data.finished::before, .list-table .list-table-data .data.days::before, .list-table .list-table-data .data.airing-started::before, .list-table .list-table-data .data.airing-finished::before {
+  display: inline-block;
+  width: 2rem;
+  height: 1.1rem;
+  padding-right: 0.25rem;
+  border-right: 1px solid #9a9a9a;
+  text-align: right;
+  color: #bababa;
+  font-size: 0.75em;
+  font-feature-settings: 'tnum' 0;
+}
+
+.list-table .list-table-data .data.started {
+  top: -1rem;
+}
+
+.list-table .list-table-data .data.started::before {
+  content: 'Start';
+}
+
+.list-table .list-table-data .data.finished {
+  top: 0;
+  margin-left: -8rem;
+}
+
+.list-table .list-table-data .data.finished::before {
+  content: 'End';
+}
+
+.list-table .list-table-data .data.days {
+  top: 1rem;
+  margin-left: -8rem;
+}
+
+.list-table .list-table-data .data.days::before {
+  content: 'Days';
+}
+
+.list-table .list-table-data .data.airing-started {
+  top: -0.5rem;
+}
+
+.list-table .list-table-data .data.airing-finished {
+  top: 0.5rem;
+  margin-left: -8rem;
+}
+
+.list-table .list-table-data .data.airing-finished::before {
+  content: 'To';
+}
+
+.list-table .list-item:nth-child(n + 101) .list-table-data .data.number {
+  text-indent: -5px;
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+
+.list-table .list-item:hover .list-table-data .data.tags a.edit {
+  opacity: 0.7;
+}
+
+.list-table .list-item:hover .list-table-data .data.tags a.edit:hover {
+  width: 25px;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.list-table .list-table-data .anime .data.airing-started::before {
+  content: 'Aired';
+}
+
+.list-table .list-table-data .manga .data.airing-started::before {
+  content: 'Issued';
+}
+
+@supports (object-fit: cover) {
+  .list-table .list-table-data .data.image a img.image {
+    height: 3rem;
+    margin: 0;
+    object-fit: cover;
+    transform: none;
+  }
+}
+
+.list-table .more-info {
+  border: none;
+}
+
+.list-table .more-info .more-content {
+  padding: 1.5rem;
+}
+
+.list-table .more-info .td1 {
+  position: relative;
+  color: #363636;
+}
+
+.list-table .more-info .td1 > div {
+  margin: 0;
+}
+
+.list-table .more-info .td1 > div > a {
+  display: none;
+}
+
+.list-unit .loading-space {
+  margin: 1.5rem;
+}
+
+.list-menu-float {
+  display: none;
+}
+
+#footer-block {
+  background: #4065BA;
+  font-family: "Inter", sans-serif;
+  padding: 3rem 1.5rem 6rem;
+}
+
+#footer-block #copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1em;
+}
+
+#footer-block #copyright::before {
+  content: 'Design by Alessandro Jean. Inspired at Bulma.';
+  display: block;
+}
+
+.list-table .list-table-data .data-tags span a:hover {
+  opacity: 1;
+}
+
+.list-table .list-table-data .data.tags span a[href*="=Favorito"] {
+  position: absolute;
+  left: -3rem;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  margin-top: -1rem;
+  overflow: hidden;
+  color: #ff65ad;
+  font-size: 0;
+  line-height: 2rem;
+  font-family: FontAwesome;
+}
+
+.list-table .list-table-data .data.tags span a[href*="=Favorito"]::before {
+  content: '\f004';
+  font-size: 1rem;
+}
+
+.list-table .list-table-data .data.tags span a[href*="=Favorito"]:hover {
+  background: #363636;
+  color: #fff;
+  text-decoration: none;
+}
+
+.list-table .list-table-data .data.tags span a {
+  position: relative;
+}
+
+.list-table .list-table-data .data.tags span a:not([href*='=Favorito'])::after, .list-table .list-table-data .data.tags span a:not([href*='=Favorito'])::before {
+  position: absolute;
+  display: block;
+  transition: all ease .15s;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
+}
+
+.list-table .list-table-data .data.tags span a:not([href*='=Favorito'])::after {
+  top: 0.5rem;
+  left: -17rem;
+  width: 15rem;
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  background: #191919;
+  border: 1px solid #777;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ababab;
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  white-space: pre-wrap;
+  z-index: 10 !important;
+  will-change: transform;
+  transform: translate(0, -51%);
+  background-size: 15rem auto;
+  background-repeat: no-repeat;
+  content: 'Sem descrição.';
+}
+
+.list-table .list-table-data .data.tags span a:not([href*='=Favorito'])::before {
+  content: '';
+  top: 0.25rem;
+  left: -2rem;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent transparent transparent #777;
+}
+
+.list-table .list-table-data .data.tags span a:not([href*='=Favorito']):hover::after {
+  left: -16rem;
+  opacity: 1;
+}
+
+.list-table .list-table-data .data.tags span a:not([href*='=Favorito']):hover::before {
+  left: -1rem;
+  opacity: 1;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Editora%20JBC'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Editora%20JBC']::after {
+  content: "Eu coleciono o mangá (ou novel) e ele foi lançado aqui pela Editora JBC.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Panini'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Panini']::after {
+  content: "Eu coleciono o mangá (ou novel) e ele foi lançado aqui pela Panini.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=NewPOP%20Editora'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=NewPOP%20Editora']::after {
+  content: "Eu coleciono o mangá (ou novel) e ele foi lançado aqui pela NewPOP.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=JENS%20Nova%20Sampa'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=JENS%20Nova%20Sampa']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Nova Sampa.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Editora%20Devir'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Editora%20Devir']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Devir.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=DarkSide'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=DarkSide']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela DarkSide.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Pipoca%20%26%20Nanquim'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Pipoca%20%26%20Nanquim']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pelo Pipoca & Nanquim.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Veneta'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Veneta']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Veneta.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Todavia'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Todavia']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Todavia.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Conrad'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Conrad']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Conrad.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=L%26PM'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=L%26PM']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela L&PM.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Verus'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Verus']::after {
+  content: "Eu coleciono a novel e ela foi lançada aqui pela Verus.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Agir'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Agir']::after {
+  content: "Eu coleciono o mangá e ele foi lançado aqui pela Verus.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Shounen'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Shounen']::after {
+  content: "A demografia da obra é shounen, ou seja, voltado mais para meninos numa faixa etária de 10~18 anos.\a \aLembrando que demografia é diferente de gênero.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Shoujo'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Shoujo']::after {
+  content: "A demografia da obra é shoujo, ou seja, voltado mais para meninas numa faixa etária de 10~18 anos.\a \aLembrando que demografia é diferente de gênero.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Seinen'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Seinen']::after {
+  content: "A demografia da obra é seinen, ou seja, voltado mais para homens adultos.\a \aLembrando que demografia é diferente de gênero.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Josei'] {
+  background-color: #00c3d7;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Josei']::after {
+  content: "A demografia da obra é josei, ou seja, voltado mais para mulheres adultas.\a \aLembrando que demografia é diferente de gênero.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Com%C3%A9dia'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Com%C3%A9dia']::after {
+  content: "Obras que tenham foco muito grande em piadas, paródias etc.\a \a Exemplo: Gintama.";
+  background-image: url("https://i.imgur.com/wA3EbnM.gif");
+  padding-top: 159px;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=A%C3%A7%C3%A3o'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=A%C3%A7%C3%A3o']::after {
+  content: "Obras que eu considero que tenham pelo menos algumas lutas, sejam com armas ou corpo-a-corpo.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Aventura'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Thriller'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Thriller']::after {
+  content: "Geralmente obras com algum mistério ou suspense como base, onde há investigações.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Slice%20of%20Life'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Slice%20of%20Life']::after {
+  content: "Obras que focam apenas em mostrar o dia-a-dia dos personagens, sem nada muito especial.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Fantasia'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Fantasia']::after {
+  content: "Obras que se passem em algum mundo diferente do contemporâneo, mais puxado para um passado medieval.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Romance'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Romance']::after {
+  content: "Obras que foquem, ou pelo menos dêem a entender, no romance entre pelo menos um casal.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Drama'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Drama']::after {
+  content: "Obras que tem um certo apelo emocional envolvido.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Terror'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Terror']::after {
+  content: "Obras que apelam para o medo.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Psicol%C3%B3gico'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Psicol%C3%B3gico']::after {
+  content: "Obras que mexem com o psicológico de quem lê, uma espécie de jogo mental.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Sci-Fi'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Sci-Fi']::after {
+  content: "Obras que se passam em futuros, sejam distópicos ou não, com tecnologias avançadas.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Mecha'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Mecha']::after {
+  content: "Obras com robôs gigantes pilotados por seres humanos.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Mist%C3%A9rio'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Mist%C3%A9rio']::after {
+  content: "Obras que tenham algum mistério que é resolvido lentamente ao decorrer dela.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Suspense'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Suspense']::after {
+  content: "Obras que tenham algum elemento que te puxa a atenção e te deixa pensativo sobre o que pode acontecer.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Esportes'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Esportes']::after {
+  content: "Obras que seguem sempre o padrão: time escolar, campeonato etc.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Ecchi'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Ecchi']::after {
+  content: "Quando a obra possui muito enfoque em mostrar sem necessidade, apenas por fanservice, peitos ou bundas.";
+  background-image: url("https://i.giphy.com/media/3jbdh4RO1PHIfHHQqG/giphy.gif");
+  padding-top: 185px;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Desprez%C3%ADvel'] {
+  background-color: #9edb48;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Desprez%C3%ADvel']::after {
+  content: "A obra possui um conteúdo repugnante e desprezível.\a \a Exemplos: Estupros, Incestos etc.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=NSCDO'] {
+  background-color: #9edb48;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=NSCDO']::after {
+  content: "Quando eu não lembro direito do enredo, mas assisti a muito tempo e lembro de parcialmente ter gostado.";
+  background-image: url("https://i.imgur.com/7ajZE0z.jpg");
+  padding-top: 118px;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Fui%20Tapeado'] {
+  background-color: #9edb48;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Fui%20Tapeado']::after {
+  content: "Quando todo mundo fala bem desta obra, mas no fim ela é horrível e eu só perdi meu tempo.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Combo%20Cl%C3%A1ssico'] {
+  background-color: #9edb48;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Combo%20Cl%C3%A1ssico']::after {
+  content: "Combo clássico: o enredo é um completo lixo e a obra também, mas as músicas de abertura e encerramento são ótimas.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Family%20Friendly'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Family%20Friendly']::after {
+  content: "A obra pode ser vista em conjunto com a família, não possui conteúdo prejudicial.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Guilty%20Pleasure'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Guilty%20Pleasure']::after {
+  content: "Por algum motivo eu gostei da obra, mesmo ela não sendo muito bacana.\a \aPode-se dizer que é embaraçoso eu gostar disso.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Modinha'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Modinha']::after {
+  content: "A obra é extremamente popular, hypada demais e não é tão boa quanto todo mundo fala.\a \a Costumo ter raiva e ódio dessas obras ao ponto de nem iniciar quando vira modinha.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Hypado%20demais'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Hypado%20demais']::after {
+  content: "A obra é muito hypada pela fandom, mas não é grandes coisas igual todos falam.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Second%20Lead'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Second%20Lead']::after {
+  content: "A obra em si é boa, mas existe alguma personagem que é second lead de algum casal, atrapalhando o desenvolvimento dos dois.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Gostos%20Divergentes'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Gostos%20Divergentes']::after {
+  content: "Basicamente, esta obra não é para mim.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Cansativo'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Cansativo']::after {
+  content: "Assistir (ou ler) esta obra é algo extremamente massante e cansativo.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Chato'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Chato']::after {
+  content: "O enredo da obra é muito chato e entediante, não dá para ficar empolgado assistindo.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Confuso'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Confuso']::after {
+  content: "O enredo é extremamente confuso, requer muita atenção para captar os detalhes importantes para o entendimento.";
+  background-image: url("https://i.imgur.com/f9xYBg7.gif");
+  padding-top: 143px;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Anima%C3%A7%C3%A3o%20Ruim'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Anima%C3%A7%C3%A3o%20Ruim']::after {
+  content: "A animação é simplesmente horrível e mal trabalhada.\a \aGeralmente eu acho a animação ruim quando ela é inteira feita em CG, ou quando ela é da Toei Animation.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Final%20Filler'] {
+  background-color: #a857bd;
+  color: #fff;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Final%20Filler']::after {
+  content: "O final do anime é filler, fazendo com que eu tenha perdido tempo assistindo enquanto deveria estar lendo o mangá.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Boa%20OST'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Boa%20OST']::after {
+  content: "A OST do anime é surpreendente e viciante.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Boa%20Anima%C3%A7%C3%A3o'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Boa%20Anima%C3%A7%C3%A3o']::after {
+  content: "A animação feita pelo estúdio está em um nível espetacular e bem trabalhado.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Emocionante'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Emocionante']::after {
+  content: "A obra me emocionou muito durante o decorrer.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Dif%C3%ADcil%20de%20Assistir'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Dif%C3%ADcil%20de%20Assistir']::after {
+  content: "Alguma coisa fez o desenvolvimento ficar muito chato ou cansativo para mim.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Dif%C3%ADcil%20de%20Ler'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Dif%C3%ADcil%20de%20Ler']::after {
+  content: "Alguma coisa fez o desenvolvimento ficar muito chato ou cansativo para mim.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Har%C3%A9m'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Har%C3%A9m']::after {
+  content: "Possui muitas pessoas apaixonadas pelo mesmo indivíduo.\a \aGeralmente não gosto pois a presença de Second Lead tem grandes probabilidades.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Me%20Surpreendeu'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Me%20Surpreendeu']::after {
+  content: "Aquelas obras que eu comecei sem esperar muito, mas surpreendentemente foram muito melhores do que eu esperava.";
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Viagem%20no%20Tempo'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Viagem%20no%20Tempo']::after {
+  content: "A obra possui elementos de viagem no tempo. Só por possuir isso já ganha um certo destaque.";
+  background-image: url("https://i.giphy.com/media/mPxA66wgs8s4o/giphy-downsized.gif");
+  padding-top: 118px;
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Empolgante'] {
+  background-color: #f9bb3d;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-table .list-table-data .data.tags span a[href*='=Empolgante']::after {
+  content: "O decorrer da obra faz você ficar na expectativa do que vai acontecer. Impossível não maratonar!";
+  background-image: url("https://i.imgur.com/9E8Lqdj.gif");
+  padding-top: 139px;
+}
