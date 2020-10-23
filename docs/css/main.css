@@ -1261,6 +1261,11 @@ body.anime .list-unit.all_anime .text::after {
   padding-top: 185px;
 }
 
+.list-table .list-table-data .data.tags span a[href*='=Cyberpunk'] {
+  background-color: #f01d54;
+  color: #fff;
+}
+
 .list-table .list-table-data .data.tags span a[href*='=Desprez%C3%ADvel'] {
   background-color: #9edb48;
   color: rgba(0, 0, 0, 0.7);
