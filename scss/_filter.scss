@@ -47,10 +47,10 @@
 }
 
 #fancybox-close {
-  width: 0;
-  height: 0;
-  top: 0px;
-  right: 0px;
+  width: 0 !important;
+  height: 0 !important;
+  top: 0px !important;
+  right: 0px !important;
 
   &:hover::after {
     color: rgba(10, 10, 10, 0.3);
