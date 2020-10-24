@@ -9,7 +9,7 @@
   width: 2rem;
   height: 2rem;
   padding: 0;
-  background: $favorite-tag-background;
+  background: $favorite-tag-background-color;
   border-radius: 50%;
   box-shadow: $large-shadow;
   margin-top: -1rem;
@@ -25,7 +25,7 @@
   }
     
   &:hover {
-    background: $favorite-tag-hover-background;
+    background: $favorite-tag-hover-background-color;
     color: $favorite-tag-hover-color;
     text-decoration: none;
   }

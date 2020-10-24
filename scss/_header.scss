@@ -1,24 +1,142 @@
 .header {
-  background-color: $header-background;
+  background-color: $header-background-color;
   width: 100%;
+  height: $header-height;
   padding-left: calc(50% - 512px);
   padding-right: calc(50% - 512px);
   display: flex;
+  justify-content: center;
+  z-index: 5;
   box-sizing: border-box;
 }
 
 .header .header-title {
   position: inherit;
-  width: 196px;
+  width: 154px;
+  height: 26px;
   background-size: 154px 26px;
+  margin-top: 5px;
   order: 1;
 }
 
 .header .header-menu {
-  position: inherit;
+  position: initial;
   order: 2;
   flex-grow: 1;
   color: $header-menu-text;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &.other .btn-menu {
+    font-size: 0;
+    height: 100%;
+  }
+
+  &.other .btn-menu a {
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+    color: $header-menu-text;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
+  }
+
+  &.other .btn-menu a.username::before {
+    content: '@';
+  }
+
+  &.other .btn-menu i.fa {
+    margin-left: 0.5rem;
+  }
+
+  &.other .list-menu {
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 8px 8px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+    top: 56px;
+    right: calc(50vw - 512px + 308px);
+
+    .icon-menu {
+      padding: 0.375rem 1rem;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      color: #4a4a4a;
+      line-height: 1.5;
+      font-weight: 400;
+      box-sizing: border-box;
+
+      &:hover {
+        background-color: #f5f5f5;
+        color: #0a0a0a;
+
+        svg.icon {
+          fill: #4a4a4a;
+        }
+      }
+
+      svg.icon,
+      span.text {
+        position: initial;
+      }
+
+      svg.icon {
+        fill: #4a4a4a;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &.other .header-info {
+    font-size: 0;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  &.other .header-info a {
+    @extend %button;
+    border-color: transparent;
+    margin: 0.5rem 0.75rem;
+
+    &:hover {
+      background-color: #f2f2f2;
+      border-color: transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+    }
+
+    &:last-of-type {
+      background-color: $mal-color;
+      border-color: transparent;
+      color: findColorInvert($mal-color);
+
+      &:hover {
+        background-color: darken($mal-color, 2.5%);
+        color: findColorInvert($mal-color);
+        border-color: transparent;
+      }
+
+      &:focus {
+        color: findColorInvert($mal-color);
+        border-color: transparent;
+      }
+    }
+  }
 }
 
 // List container
@@ -32,9 +150,14 @@
 // Cover container
 
 .cover-block {
-  background-color: $header-background;
+  background-image: url($header-background-image);
+  background-color: $header-background-color;
+  background-repeat: repeat-x;
+  background-position-x: 0;
+  background-position-y: 0;
   box-shadow: $large-shadow;
   width: 100%;
+  padding-top: $header-height;
 }
 
 .cover-block .image-container {
@@ -49,7 +172,7 @@
   color: $primary-color;
   font-family: $font-family;
   font-size: 0.875rem;
-  top: 1.5em !important;
+  top: calc(1.5em + #{$header-height}) !important;
   right: calc(50% - 512px) !important;
   padding: calc(.5em - 1px) calc(1em + .25em) !important;
   font-family: $font-family !important;
@@ -76,7 +199,7 @@
   }
     
   &:hover {
-    background-color: $header-button-hover-background;
+    background-color: $header-button-hover-background-color;
     border-radius: 290486px;
     border: none;
     box-shadow: none;
@@ -88,7 +211,7 @@
 // Status menu
 
 .status-menu-container {
-  background: $status-menu-background;
+  background: $status-menu-background-color;
   width: 100%;
   height: unset;
   padding: 0 calc(50% - 512px);
@@ -126,7 +249,7 @@
   transition: none;
     
   &:hover {
-    background-color: $status-menu-button-hover-background;
+    background-color: $status-menu-button-hover-background-color;
     opacity: 1;
   }
     
@@ -135,7 +258,7 @@
   }
     
   &.on {
-    background-color: $status-menu-button-active-background;
+    background-color: $status-menu-button-active-background-color;
     border-color: #fff;
     color: $status-menu-button-active-color;
     font-weight: 400;

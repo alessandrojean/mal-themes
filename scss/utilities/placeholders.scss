@@ -1,5 +1,5 @@
 %button {
-  background-color: $button-background;
+  background-color: $button-background-color;
   border: 1px $button-border solid;
   color: $button-color;
   padding: calc(.5em - 1px) 1em;
@@ -9,6 +9,8 @@
   font-size: 1rem;
   height: $button-height;
   transition: none;
+  font-family: $font-family;
+  font-weight: 400;
 
   i.fa {
     margin-left: calc(-0.5em - 1px);
@@ -36,7 +38,7 @@
   height: $select-height;
   font-size: 1rem;
   outline: 0;
-  background-color: $select-background;
+  background-color: $select-background-color;
   border-color: $select-border;
   border-radius: $radius;
   color: $text-color;
@@ -58,7 +60,7 @@
   box-sizing: border-box;
   padding: calc(.75em - 1px);
   box-shadow: $textarea-shadow;
-  background-color: $textarea-background;
+  background-color: $textarea-background-color;
   border-color: $textarea-border;
   outline: none;
   border-radius: $radius;

@@ -22,3 +22,49 @@ a:hover {
   text-decoration: none !important;
   color: $mal-color;
 }
+
+// GDPR Modal
+
+#gdpr-modal-bottom {
+  background: transparent;
+
+  .modal-container {
+    font-family: $font-family;
+
+    .button-wrapper button {
+      @extend %button;
+      background-color: $mal-color;
+      color: findColorInvert($mal-color);
+      border-color: transparent;
+
+      &:last-of-type {
+        margin: 0 auto 12px;
+      }
+
+      &:hover {
+        background-color: darken($mal-color, 2.5%);
+        color: findColorInvert($mal-color);
+        border-color: transparent;
+      }
+
+      &:focus {
+        color: findColorInvert($mal-color);
+        border-color: transparent;
+      }
+    }
+
+    .button-wrapper a {
+      @extend %button;
+      border-color: transparent;
+
+      &:hover {
+        background-color: #f9f9f9;
+        border-color: transparent;
+      }
+
+      &:focus {
+        border-color: transparent;
+      }
+    }
+  }
+}

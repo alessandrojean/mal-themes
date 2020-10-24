@@ -1,3 +1,7 @@
+.list-container {
+  margin-top: -$header-height;
+}
+
 .list-unit .list-status-title {
   background-color: transparent;
   width: 100%;
@@ -27,12 +31,12 @@
 }
 
 body.manga .list-unit.all_anime .text::after {
-  content: 'All manga';
+  content: 'All Manga';
   font-size: 2rem;
 }
 
 body.anime .list-unit.all_anime .text::after {
-  content: 'All anime';
+  content: 'All Anime';
   font-size: 2rem;
 }
 
@@ -42,17 +46,17 @@ body.anime .list-unit.all_anime .text::after {
 }
 
 .list-unit.reading .list-status-title .text::after {
-  content: 'Currently reading';
+  content: 'Currently Reading';
   font-size: 2rem;
 }
 
 .list-unit.watching .list-status-title .text::after {
-  content: 'Currently watching';
+  content: 'Currently Watching';
   font-size: 2rem;
 }
 
 .list-unit.onhold .list-status-title .text::after {
-  content: 'On hold';
+  content: 'On Hold';
   font-size: 2rem;
 }
 
@@ -62,12 +66,12 @@ body.anime .list-unit.all_anime .text::after {
 }
 
 .list-unit.plantoread .list-status-title .text::after {
-  content: 'Plan to read';
+  content: 'Plan to Read';
   font-size: 2rem;
 }
 
 .list-unit.plantowatch .list-status-title .text::after {
-  content: 'Plan to watch';
+  content: 'Plan to Watch';
   font-size: 2rem;
 }
 
@@ -121,10 +125,10 @@ body.anime .list-unit.all_anime .text::after {
   position: relative;
   display: block;
   width: 100%;
-  min-height: 4rem;
+  min-height: 4.5rem;
   border: none;
   margin-bottom: 1em;
-  background: $list-item-background;
+  background: $list-item-background-color;
   box-shadow: $large-shadow;
   border-radius: 4px;
 }
@@ -134,7 +138,7 @@ body.anime .list-unit.all_anime .text::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 4rem;
+  min-height: 4.5rem;
   font-size: 0;
 }
 
@@ -149,7 +153,7 @@ body.anime .list-unit.all_anime .text::after {
 
   &.number {
     position: relative;
-    background: $list-data-number-background;
+    background: $list-data-number-background-color;
     border-radius: 50%;
     width: $list-data-number-width;
     height: $list-data-number-height;
@@ -432,19 +436,24 @@ body.anime .list-unit.all_anime .text::after {
       line-height: 0;
         
       a:not(.edit) {
-        display: block;
-        padding: 2px;
-        background: #ebebeb;
-        border-radius: 0.5rem;
-        color: $text-color;
+        align-items: center;
+        background-color: $list-item-tag-background-color;
+        color: $list-item-tag-color;
+        display: inline-flex;
         font-size: 0.75rem;
-        line-height: 1.2;
-        z-index: 10;
+        width: 100%;
+        height: 2em;
+        justify-content: center;
+        line-height: 1.5;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        white-space: nowrap;
+        box-sizing: border-box;
+        border-radius: 1em;
       }
         
       a:hover {
-        background: $text-color;
-        color: #fff;
+        background-color: $list-item-tag-hover-background-color;
         text-decoration: none;
       }
     }
@@ -462,7 +471,7 @@ body.anime .list-unit.all_anime .text::after {
       z-index: 5;
         
       &::after {
-        content: '\f040';
+        content: '\f02c';
         position: absolute;
         top: 50%;
         right: 0;
@@ -502,30 +511,36 @@ body.anime .list-unit.all_anime .text::after {
     order: $list-data-stats-order;
     position: relative;
     width: $list-data-stats-width;
+    min-height: $list-data-stats-height;
     height: $list-data-stats-height;
     overflow: hidden;
     color: $text-color;
     font-size: 0.875rem;
-    line-height: 1rem;
+    line-height: 1.5;
     text-align: left;
     text-overflow: ellipsis;
     font-feature-settings: 'tnum' 1;
+    display: inline-flex;
+    align-items: center;
       
     &::before {
-      display: inline-block;
+      display: inline-flex;
       width: 2rem;
-      height: 1.1rem;
+      height: 100%;
       padding-right: 0.25rem;
+      margin-right: 0.25rem;
       border-right: 1px solid #9a9a9a;
       text-align: right;
       color: #bababa;
       font-size: 0.75em;
       font-feature-settings: 'tnum' 0;
+      justify-content: flex-end;
+      align-items: center;
     }
   }
     
   &.started {
-    top: -1rem;
+    top: -$list-data-stats-height;
       
     &::before {
       content: 'Start';
@@ -542,7 +557,7 @@ body.anime .list-unit.all_anime .text::after {
   }
     
   &.days {
-    top: 1rem;
+    top: $list-data-stats-height;
     margin-left: -8rem;
     
     &::before {
@@ -551,11 +566,11 @@ body.anime .list-unit.all_anime .text::after {
   }
     
   &.airing-started {
-    top: -0.5rem;
+    top: -$list-data-stats-height / 2;
   }
     
   &.airing-finished {
-    top: 0.5rem;
+    top: $list-data-stats-height / 2;
     margin-left: -8rem;
       
     &::before {
