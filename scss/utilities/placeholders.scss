@@ -53,6 +53,18 @@
     border-color: $select-focus-border;
     box-shadow: $select-focus-shadow;
   }
+
+  &[disabled] {
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+    box-shadow: none;
+    color: #7a7a7a;
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: #f5f5f5;
+    }
+  }
 }
 
 %textarea {
@@ -75,4 +87,9 @@
     border-color: $textarea-focus-border;
     box-shadow: $textarea-focus-shadow;
   }
+}
+
+%input {
+  @extend %textarea;
+  height: 2.5rem;
 }
