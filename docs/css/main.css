@@ -1090,7 +1090,8 @@ body.anime .list-unit.all_anime .text::after {
   opacity: 1 !important;
 }
 
-#advanced-options::before {
+#advanced-options::before,
+#fancybox-inner::before {
   background-color: #f5f5f5;
   border-bottom: 1px solid #dbdbdb;
   border-top-left-radius: 6px;
@@ -1104,20 +1105,39 @@ body.anime .list-unit.all_anime .text::after {
   font-size: 1.5rem;
   line-height: 1;
   font-family: "Inter", sans-serif;
+  text-align: left;
 }
 
-#advanced-options #fancybox-close {
+#fancybox-outer {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#fancybox-inner {
+  top: 0px !important;
+  left: 0px !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+#fancybox-inner::before {
+  content: 'Edit';
+}
+
+#fancybox-close {
   width: 0;
   height: 0;
   top: 0px;
   right: 0px;
 }
 
-#advanced-options #fancybox-close:hover::after {
+#fancybox-close:hover::after {
   color: rgba(10, 10, 10, 0.3);
 }
 
-#advanced-options #fancybox-close::after {
+#fancybox-close::after {
   font-family: FontAwesome;
   font-size: 23px;
   background: none;
