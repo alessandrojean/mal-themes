@@ -407,7 +407,6 @@ a:hover {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   display: block;
-  opacity: 0.9;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
   padding: .5em 1em;
@@ -416,7 +415,7 @@ a:hover {
 
 .status-menu-container .status-menu .status-button:hover {
   background-color: rgba(10, 10, 10, 0.1);
-  opacity: 1;
+  color: #fff;
 }
 
 .status-menu-container .status-menu .status-button::after {

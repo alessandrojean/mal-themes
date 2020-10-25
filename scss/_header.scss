@@ -245,7 +245,6 @@
   font-weight: 400;
   color: $status-menu-button-color;
   display: block;
-  opacity: 0.9;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
   padding: .5em 1em;
@@ -253,7 +252,7 @@
     
   &:hover {
     background-color: $status-menu-button-hover-background-color;
-    opacity: 1;
+    color: $status-menu-button-hover-color;
   }
     
   &::after {
