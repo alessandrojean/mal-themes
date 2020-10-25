@@ -37,12 +37,13 @@ $textarea-focus-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
 
 $header-height: 70px;
 $header-background-color: transparent;
-$header-background-image: 'https://i.imgur.com/einmpQQ.gif';
-$header-menu-text:  rgba(255, 255, 255, 0.7);
+$header-cover-background: url('https://i.imgur.com/2jdsm4X.png') top center repeat-x,
+  url('https://i.imgur.com/z15SQd9.png') center top no-repeat rgba(0, 0, 0, 0.9);
+$header-menu-text: rgba(255, 255, 255, 0.7);
 $header-button-hover-background-color: #F2F2F3;
 
 $status-menu-background-color: transparent;
-$status-menu-button-color: #fff;
+$status-menu-button-color: rgba(255, 255, 255, 0.7);
 $status-menu-button-hover-background-color: rgba(10, 10, 10, 0.1);
 $status-menu-button-active-background-color: #fff;
 $status-menu-button-active-color: $primary-color;

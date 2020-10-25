@@ -150,11 +150,7 @@
 // Cover container
 
 .cover-block {
-  background-image: url($header-background-image);
-  background-color: $header-background-color;
-  background-repeat: repeat-x;
-  background-position-x: 0;
-  background-position-y: 0;
+  background: $header-cover-background;
   box-shadow: $large-shadow;
   width: 100%;
   padding-top: $header-height;
@@ -163,6 +159,13 @@
 .cover-block .image-container {
   width: 100%;
   display: block;
+}
+
+.cover-block #cover-image {
+  width: auto;
+  height: 500px;
+  margin-top: -$header-height;
+  margin-bottom: 2.5em;
 }
 
 .cover-block .image-container .btn-list-setting {

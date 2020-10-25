@@ -314,11 +314,7 @@ a:hover {
 }
 
 .cover-block {
-  background-image: url("https://i.imgur.com/einmpQQ.gif");
-  background-color: transparent;
-  background-repeat: repeat-x;
-  background-position-x: 0;
-  background-position-y: 0;
+  background: url("https://i.imgur.com/2jdsm4X.png") top center repeat-x, url("https://i.imgur.com/z15SQd9.png") center top no-repeat rgba(0, 0, 0, 0.9);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   width: 100%;
   padding-top: 70px;
@@ -327,6 +323,13 @@ a:hover {
 .cover-block .image-container {
   width: 100%;
   display: block;
+}
+
+.cover-block #cover-image {
+  width: auto;
+  height: 500px;
+  margin-top: -70px;
+  margin-bottom: 2.5em;
 }
 
 .cover-block .image-container .btn-list-setting {
@@ -402,7 +405,7 @@ a:hover {
   font-family: "Inter", sans-serif;
   font-size: 1em;
   font-weight: 400;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   display: block;
   opacity: 0.9;
   border: 1px solid transparent;
